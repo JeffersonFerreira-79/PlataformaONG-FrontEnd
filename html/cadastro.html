@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cadastro | Apoio Humanitário Digital</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+<body>
+
+ <header>
+    <h1>Apoio Humanitário Digital</h1> 
+    
+    <button id="theme-toggle" aria-label="Alternar para Modo Escuro/Claro">
+        🌙
+    </button>
+    
+    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-principal">☰</button>
+
+    <nav id="menu-principal">
+        </nav>
+</header>
+
+    <main>
+        
+        <section id="cadastro-form">
+            <h2>Junte-se a Nós! Cadastro de Voluntário ou Doador</h2>
+            <p>Preencha o formulário abaixo para se candidatar como voluntário ou realizar uma doação online.</p>
+            
+            <form action="#" method="POST"> 
+                
+                <fieldset class="grid-container">
+                    <legend class="col-12">Dados Pessoais</legend>
+                    
+                    <div class="col-12 lg-col-6">
+                        <label for="nome_completo">Nome Completo:</label>
+                        <input type="text" id="nome_completo" name="nome_completo" required>
+                    </div>
+
+                    <div class="col-12 lg-col-6">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="col-12 lg-col-4">
+                        <label for="data_nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" required>
+                    </div>
+                    
+                    <div class="col-12 lg-col-4">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" 
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                                placeholder="999.999.999-99" 
+                                title="Formato: 999.999.999-99" required>
+                    </div>
+                    
+                    <div class="col-12 lg-col-4">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" 
+                               pattern="\(\d{2}\) \d{5}-\d{4}" 
+                               placeholder="(XX) 9XXXX-XXXX" 
+                               title="Formato: (XX) XXXXX-XXXX" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="grid-container">
+                    <legend class="col-12">Endereço</legend>
+                    
+                    <div class="col-12 lg-col-3">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" 
+                               pattern="\d{5}-\d{3}" 
+                               placeholder="99999-999" 
+                               title="Formato: 99999-999" required>
+                    </div>
+                    
+                    <div class="col-12 lg-col-9">
+                        <label for="endereco">Endereço (Rua e Número):</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                    </div>
+                    
+                    <div class="col-12 lg-col-6">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                    
+                    <div class="col-12 lg-col-6">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione o Estado</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como Você Quer se Engajar?</legend>
+                    
+                    <div style="display: flex; gap: var(--espaco-md); flex-wrap: wrap;"> 
+                        <div style="margin-bottom: 0;">
+                            <input type="checkbox" id="voluntario" name="interesse" value="voluntario">
+                            <label for="voluntario" style="display: inline;">Quero ser um Voluntário</label>
+                        </div>
+                        
+                        <div style="margin-bottom: 0;">
+                            <input type="checkbox" id="doador" name="interesse" value="doador">
+                            <label for="doador" style="display: inline;">Quero Fazer uma Doação Pontual</label>
+                        </div>
+                        
+                        <div style="margin-bottom: 0;">
+                            <input type="checkbox" id="newsletter" name="interesse" value="newsletter">
+                            <label for="newsletter" style="display: inline;">Desejo receber a Newsletter</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div style="display: flex; justify-content: center; gap: var(--espaco-sm);">
+                    <button type="submit">Enviar Cadastro e Apoiar a ONG</button>
+                    <button type="reset">Limpar Campos</button>
+                </div>
+                
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apoio Humanitário Digital. Todos os direitos reservados.</p>
+        <nav>
+            <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

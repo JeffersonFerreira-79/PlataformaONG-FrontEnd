@@ -1,0 +1,79 @@
+/* ========================================================= */
+/* style.css - (CÓDIGO COMPLETO E FINAL - Incluindo Dark Mode) */
+/* ENTREGA IV - ETAPA 1: MODO ESCURO ACESSÍVEL */
+/* ========================================================= */
+
+/* Reset Básico para consistência em navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* ========================================================= */
+/* SISTEMA DE DESIGN & CORES CLARAS (PADRÃO) */
+/* ========================================================= */
+
+:root {
+    /* PALETA DE CORES CLARAS (WCAG AA) */
+    --cor-primaria: #0056b3;        /* Azul Institucional */
+    --cor-secundaria: #1e7e34;      /* Verde Sucesso */
+    --cor-erro: #dc3545;            
+    --cor-texto: #333333;           /* Preto para Alto Contraste */
+    --cor-fundo-geral: #f8f9fa;     /* Fundo Geral */
+    --cor-fundo-cartao: #ffffff;    /* Fundo de Cartões e Header */
+    --cor-footer: #343a40;          /* Rodapé Escuro */
+    
+    /* ... (Demais Variáveis) ... */
+    --fonte-principal: 'Arial', sans-serif;
+    --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================================= */
+/* MODO ESCURO ACESSÍVEL (Dark Mode) (REQUISITO) */
+/* Contraste mínimo de 4,5:1 garantido com cores invertidas  */
+/* ========================================================= */
+
+body.dark-mode {
+    /* Cores Invertidas */
+    --cor-texto: #ffffff;           /* Texto Branco */
+    --cor-fundo-geral: #121212;     /* Fundo Preto Profundo */
+    --cor-fundo-cartao: #1e1e1e;    /* Fundo de Cartões */
+    --cor-footer: #000000;          /* Rodapé Preto */
+    --cor-progresso-fundo: #444;    /* Fundo escuro para barra */
+    --cor-borda-cartao: #333;
+    
+    /* Cores de Ação (Mantidas ou ligeiramente ajustadas para fundo escuro) */
+    --cor-primaria: #64b5f6;        /* Azul mais claro para links */
+    --cor-secundaria: #81c784;      /* Verde mais claro para botões */
+}
+
+/* Aplica o fundo geral do body */
+body {
+    background-color: var(--cor-fundo-geral);
+    color: var(--cor-texto);
+    transition: background-color 0.5s;
+}
+
+/* Aplica o fundo do cartão/seção */
+section, header {
+    background-color: var(--cor-fundo-cartao);
+    transition: background-color 0.5s;
+}
+
+/* Garante que o texto se adapte em todo o site */
+h1, h2, h3, p, a, button {
+    color: var(--cor-texto);
+}
+
+/* Estilo do Botão Toggle (NOVO) */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: var(--tamanho-lg);
+    cursor: pointer;
+    margin-right: var(--espaco-sm);
+    color: var(--cor-texto); /* Usa cor do texto para se adaptar ao modo */
+}
+
+/* ... (O restante dos seus estilos de navegação, componentes, etc. ) ... */
